@@ -1,0 +1,37 @@
+body {
+    background-image: url(https://picserio.com/data/out/497/light-blue-and-pink-wallpaper_6964199.png);
+    background-size: auto 100vh;
+    font-family: Arial;
+    height: 100vh;
+}
+
+.menu {
+    background-color: white;
+}
+
+a {
+    color: teal;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.site-title, .site-subtitle {
+    color: magenta;
+    text-align: center;
+}
+
+.site-subtitle {
+    font-style: italic;
+}
