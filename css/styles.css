@@ -1,12 +1,47 @@
+/* Reset do CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url(https://picserio.com/data/out/497/light-blue-and-pink-wallpaper_6964199.png);
-    background-size: auto 100vh;
-    font-family: Arial;
+    background-image: url('https://wallpaperaccess.com/full/1092854.jpg');
+    background-size: auto 100vh 100vw;
+    font-family: 'Baloo Chettan 2', cursive;
     height: 100vh;
+    /* backdrop-filter: blur(5px); */
+}
+
+/* Se a tela tiver pelo menos 400px ela carregará esses estilos */
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-family: 'Sacramento', cursive;
 }
 
 .menu {
     background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 a {
@@ -27,11 +62,82 @@ a:hover {
     list-style: none;
 }
 
+.menu a {
+    display: block;
+    padding: 10px 20px;
+}
+
 .site-title, .site-subtitle {
-    color: magenta;
+    color: #993099;
     text-align: center;
+}
+
+.site-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
 }
 
 .site-subtitle {
     font-style: italic;
 }
+
+.img_trabalhos {
+    height: 180px;
+    width: 240px;
+    object-fit: cover;
+}
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+/* .projetos * {
+    display: flex;
+} */
+
+.projetos h2 {
+    align-self: center;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+}
+
+.projetos .grid {
+    display: grid;
+    gap: 1em;
+    justify-content: center;
+}
+
+.projetos figure {
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    .projetos .grid {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 380px 380px;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 950px) {
+    .projetos .grid {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(3, 270px);
+        justify-content: center;
+    }
+}
+
+/*
+.projetos figure {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+figcaption {
+    text-align: center;
+} */
