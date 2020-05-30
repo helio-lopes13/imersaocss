@@ -6,33 +6,94 @@
         <title>Hélio Lopes Alves</title>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Dancing+Script&family=Sacramento&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
+        
+        <script src="https://kit.fontawesome.com/4eb24b9bc5.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
             <nav class="menu">
-                <ul>
-                    <li><a href="#">Quem sou eu</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Contato</a></li>
+                <ul class="container">
+                    <li><a href="#sobre">Quem sou eu</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
-            <div>
+            <div class="intro">
                 <h1 class="site-title">Hélio Lopes</h1>
-                <h2 class="site-subtitle">Dev em andamento!!!</h2>
+                <h2 class="site-subtitle">Estudante de Ciência da Computação!</h2>
+                <h2 class="site-subtitle">Aspirante a muita coisa!!</h2>
+                <h2 class="site-subtitle">Dev front end (?) em andamento!!!</h2>
             </div>
         </header>
 
-        <section class="projetos">
+        <section class="sobre container" id="sobre">
+            <h2>Quem sou eu</h2>
+
+            <div class="texto">
+                <figure class="profile">
+                    <img src="https://pbs.twimg.com/profile_images/1223433212900335617/zQ27PYPY_400x400.jpg" alt="Hélio Lopes">
+                </figure>
+    
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quidem quis corporis minima quod cum perferendis iste blanditiis, laudantium laboriosam, ex dolorum accusamus facere, nemo illo magni doloremque dolor ratione?
+                </p>
+                <p>
+                    Deleniti ipsa sit numquam dolor vero hic iste harum veritatis, ullam vitae atque fugiat. Eveniet cumque laborum est vitae nobis suscipit cum in recusandae! Error id dolore blanditiis tempora ex?
+                </p>
+                <p>
+                    Incidunt, fugiat assumenda laborum molestias ea maiores quis labore vitae quasi in eius suscipit. Corporis, quos? At, voluptatibus esse et distinctio, quasi facere deserunt consequuntur veniam nemo optio dolorem repudiandae.
+                </p>
+                <p>
+                    Esse site foi construído durante a <a href="https://www.alura.com.br/imersao-css" target="_blank"> Imersão CSS</a> da Alura.
+                </p>
+
+            </div>
+            
+        </section>
+        
+        <section class="projetos container" id="projetos">
             <h2>Projetos</h2>
             <div class="grid">
-                <figure>
-                    <img class="img_trabalhos" src="img/heart.png" alt="'Estudos' em Kingdom Hearts.">
-                    <figcaption>"Estudos" em Kingdom Hearts.</figcaption>
-                </figure>
-                <figure>
-                    <img class="img_trabalhos" src="img/SysFrequencia.png" alt="Participação no projeto de desenvolvimento do sistema SysFrequência do NDS do IFCE Campus Maracanaú.">
-                    <figcaption>Participação no projeto de desenvolvimento do sistema SysFrequência do NDS do IFCE Campus Maracanaú.</figcaption>
-                </figure>
+                <div class="flip-card">
+                    <div class="card">
+                        <figure class="card-front">
+                            <img class="img_trabalhos" src="img/heart.png" alt="'Estudos' em Kingdom Hearts.">
+                        </figure>
+                        <div class="card-back">
+                            <h3>"Estudos" em Kingdom Hearts.</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="card">
+                        <figure class="card-front">
+                            <img class="img_trabalhos" src="img/SysFrequencia.png" alt="Participação no projeto de desenvolvimento do sistema SysFrequência do NDS do IFCE Campus Maracanaú.">
+                        </figure>
+                        <div class="card-back">
+                            <h3>Participação no projeto de desenvolvimento do sistema SysFrequência do NDS do IFCE Campus Maracanaú.</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contato container" id="contato">
+            <h2>Contato</h2>
+            <div class="grid icons">
+                <a href="https://github.com/helio-lopes13" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/moonhelios13" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/heliolopes.13" target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="mailto:heliosgod13@gmail.com" target="_blank">
+                    <i class="far fa-envelope"></i>
+                </a>
             </div>
         </section>
     </body>
