@@ -14,17 +14,21 @@ body {
 }
 
 /* Se a tela tiver pelo menos 400px ela carregará esses estilos */
+
 @media (min-width: 400px) {
     body {
         font-size: 14px;
     }
 }
 
+/* Se a tela tiver pelo menos 600px ela carregará esses estilos */
 @media (min-width: 600px) {
     body {
+        background-attachment: fixed;
+        background-size: cover;
         font-size: 18px;
     }
-}
+  }
 
 header {
     height: 100vh;
@@ -42,10 +46,11 @@ h2 {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
 }
 
 a {
-    color: teal;
+    color: cornflowerblue;
     text-decoration: none;
 }
 
@@ -60,12 +65,48 @@ a:hover {
 
 .menu li {
     list-style: none;
+    text-align: center;
 }
 
 .menu a {
     display: block;
     padding: 10px 20px;
+    transition: background-color 0.5s, color 0.5s;
 }
+
+.menu a:active,
+.menu a:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.intro {
+    transform: scale(0);
+    filter: blur(5px);
+    animation: 3s linear 1s animarIntro forwards,
+    500ms linear 3s animarIntro2 forwards;
+}
+
+@keyframes animarIntro {
+    0% {
+        transform: scale(0) translateY(-100vh);
+    }
+
+    100% {
+        transform: scale(1) translateY(0vh);
+    }
+}
+
+@keyframes animarIntro2 {
+    from {
+        filter: blur(5px);
+    }
+    
+    to {
+        filter: blur(0px);
+    }
+}
+
 
 .site-title, .site-subtitle {
     color: #993099;
@@ -83,24 +124,67 @@ a:hover {
 
 .img_trabalhos {
     height: 180px;
-    width: 240px;
+    width: 100%;
     object-fit: cover;
 }
 
+.sobre,
+.contato,
 .projetos {
     display: flex;
     flex-direction: column;
-    padding: 2em;
+    padding: 3em;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+    .sobre,
+    .contato,
+    .projetos {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* .projetos * {
     display: flex;
 } */
 
+.sobre h2,
+.contato h2,
 .projetos h2 {
     align-self: center;
     font-size: 2em;
     margin-bottom: 1.5em;
+    color: #993099;
+}
+
+.sobre p {
+    color: #993099;
+    margin-bottom: 1em;
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+.sobre .profile img {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+@media (min-width: 600px) {
+    .sobre .profile img {
+        margin-right: 2em;
+    }
+    
+    .sobre .profile {
+        float: left;
+    }
+}
+
+.sobre .texto {
+    display: block;
 }
 
 .projetos .grid {
@@ -110,7 +194,65 @@ a:hover {
 }
 
 .projetos figure {
+    color: #993099;
     text-align: center;
+}
+
+.flip-card {
+    height: 180px;
+    perspective: 700px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.flip-card:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    height: 180px;
+    backface-visibility: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    width: 100%;
+    background-color: antiquewhite;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.contato a {
+    color: blueviolet;
+    font-size: 5em;
+    text-align: center;
+    text-decoration: none;
+    transition: text-shadow 0.5s;
+}
+
+.contato a:active,
+.contato a:hover {
+    text-shadow: 0px 0px 10px rgba(255, 235, 205, 1);
+}
+/* rgba(255, 235, 205) */
+.contato .icons {
+    display: grid;
+    align-self: center;
+    gap: 1em;
+    grid-template-columns: 5em 5em 5em 5em;
 }
 
 @media (min-width: 800px) {
@@ -130,6 +272,11 @@ a:hover {
         justify-content: center;
     }
 }
+
+/* #projetos,
+#contato {
+    padding-top: 0px;
+} */
 
 /*
 .projetos figure {
